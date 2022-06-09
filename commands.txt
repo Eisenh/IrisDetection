@@ -1,0 +1,19 @@
+docker pull jupyter/tensorflow-notebook:latest
+
+docker run -it --rm --name tf -v /Documents/IrisDetectionWork:/work -p 8888:8888 -p 6006:6006 jupyter/tensorflow-notebook
+
+docker run -it --rm --name tf -v ~/:/notebooks -p 8888:8888 -p 6006:6006 tensorflow/tensorflow
+
+docker exec -it tf tensorboard --logdir tf_logs/
+
+
+-v $PWD:/notebooks
+commands.txt
+C:\Users\eisen\Documents\IrisDetectionWork\commands.txt
+
+FROM jupyter/tensorflow-notebook
+WORKDIR /code
+RUN mkdir /notebooks
+ENV port=8888
+EXPOSE 8888
+CMD jupyter notebook  --ip 0.0.0.0 --port 8888 /notebooks

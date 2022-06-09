@@ -1,0 +1,21 @@
+item {
+  id: 1
+  name: "strip"
+  display_name: "Strip"
+  keypoints {
+    id: 0
+    label: "tl"
+  }
+  keypoints {
+    id: 1
+    label: "tr"
+  }
+  keypoints {
+    id: 2
+    label: "bl"
+  }
+  keypoints {
+    id: 3
+    label: "br"
+  }
+}
